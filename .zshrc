@@ -9,27 +9,27 @@ export CPPFLAGS="-I/usr/local/opt/libpq/include"
 export PATH="/usr/local/opt/libpq/bin:$PATH"
 export DYLD_LIBRARY_PATH="/usr/local/Cellar/postgresql@14/14.17_1/lib/postgresql@14:$DYLD_LIBRARY_PATH"
 
-# source /Users/markusbajlo/.config/broot/launcher/bash/br
+# source $HOME/.config/broot/launcher/bash/br
 
 # ####################################################################
 # PATHS---------------------------------------------------------------
 # ####################################################################
 ## Conda path
-export PATH="/Users/markusbajlo/miniconda3/bin:$PATH"
+export PATH="$HOME/miniconda3/bin:$PATH"
 
 # Cursor path
 export PATH="$PATH:/usr/local/bin/Cursor"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-# __conda_setup="$('/Users/markusbajlo/miniconda3/bin/conda' 'shell.zsh' 'hook' 2>/dev/null)"
+# __conda_setup="$('$HOME/miniconda3/bin/conda' 'shell.zsh' 'hook' 2>/dev/null)"
 # if [ $? -eq 0 ]; then
 #   eval "$__conda_setup"
 # else
-#   if [ -f "/Users/markusbajlo/miniconda3/etc/profile.d/conda.sh" ]; then
-#     . "/Users/markusbajlo/miniconda3/etc/profile.d/conda.sh"
+#   if [ -f "$HOME/miniconda3/etc/profile.d/conda.sh" ]; then
+#     . "$HOME/miniconda3/etc/profile.d/conda.sh"
 #   else
-#     export PATH="/Users/markusbajlo/.local/share/uv/python/cpython-3.13.2-macos-x86_64-none/bin/python3.13:$PATH"
+#     export PATH="$HOME/.local/share/uv/python/cpython-3.13.2-macos-x86_64-none/bin/python3.13:$PATH"
 #   fi
 # fi
 # unset __conda_setup
@@ -58,10 +58,10 @@ spf() {
 }
 
 # Created by `pipx` on 2024-11-17 17:48:50
-export PATH="$PATH:/Users/markusbajlo/.local/bin"
+export PATH="$PATH:$HOME/.local/bin"
 
 # python uv PATH
-export PATH="/Users/markusbajlo/.local/share/uv/python/cpython-3.14.2-macos-x86_64-none/bin:$PATH"
+export PATH="$HOME/.local/share/uv/python/cpython-3.14.2-macos-x86_64-none/bin:$PATH"
 
 # Golang
 export PATH=$PATH:~/go/bin
@@ -117,7 +117,7 @@ alias aerc='aerc -C "$AERC_CONFIG_DIR/aerc.conf" -A "$AERC_CONFIG_DIR/accounts.c
 export GPG_TTY=$(tty)
 
 # oh my zsh
-source /Users/markusbajlo/.config/oh-my-zsh/.zshrc_conf
+source $HOME/.config/oh-my-zsh/.zshrc_conf
 
 # task (todo-tool)
 export TASKRC=~/.config/task/.taskrc
@@ -150,11 +150,11 @@ alias face='cd ~/Documents/Programmering/python/face_recog/face && uv run main.p
 alias jobsearch='/usr/local/bin/job_search_cli.sh'
 
 # function to run gmail_cleaner from terminal
-alias gmail-clean='/Users/markusbajlo/.gmail-cleaner/.venv/bin/python /Users/markusbajlo/.gmail-cleaner/main.py'
+alias gmail-clean='$HOME/.gmail-cleaner/.venv/bin/python $HOME/.gmail-cleaner/main.py'
 
 ################## PYTHON #######################
 # script to init projects
-alias uvinit="uv run --active /Users/markusbajlo/Documents/Programmering/python/proj_setup_uv_git_init/main.py \$1"
+alias uvinit="uv run --active $HOME/Documents/Programmering/python/proj_setup_uv_git_init/main.py \$1"
 
 alias uvr='uv pip freeze > requirements.txt'
 
