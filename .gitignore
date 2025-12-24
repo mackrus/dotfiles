@@ -4,3 +4,8 @@
 *.bak
 *.swp
 *.tmp
+*_old
+*_manual
+*.bak
+*.log
+helper/helper
