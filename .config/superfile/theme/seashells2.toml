@@ -1,0 +1,63 @@
+# seashells.toml
+# Theme based on a Seashells color palette
+#
+
+# Code syntax highlight theme (choose one that matches Seashells' aesthetic)
+code_syntax_highlight = "catppuccin-macchiato"  # Note: You may need to create/adapt a syntax theme
+
+# ========= Border =========
+file_panel_border = "#495a66"
+sidebar_border = "#495a66"
+footer_border = "#495a66"
+
+# ========= Border Active =========
+file_panel_border_active = "#ffd5b8"
+sidebar_border_active = "#bfced8"
+footer_border_active = "#809eb2"
+modal_border_active = "#ffd5b8"
+
+# ========= Background (bg) =========
+full_screen_bg = "#2d373c"
+file_panel_bg = "#2d373c"
+sidebar_bg = "#2d373c"
+footer_bg = "#2d373c"
+modal_bg = "#2d373c"
+
+# ========= Foreground (fg) =========
+full_screen_fg = "#fff3eb"
+file_panel_fg = "#fff3eb"
+sidebar_fg = "#fff3eb"
+footer_fg = "#fff3eb"
+modal_fg = "#fff3eb"
+
+# ========= Special Color =========
+cursor = "#ffd5b8"
+correct = "#027c9b" # Kept from original
+error = "#d15123" # Kept from original
+hint = "#bfced8"
+cancel = "#d48678" # Kept from original
+# Gradient color can only have two color!
+gradient_color = ["#809eb2", "#ffd5b8"]
+
+# ========= File Panel Special Items =========
+file_panel_top_directory_icon = "#bfced8"
+file_panel_top_path = "#809eb2"
+file_panel_item_selected_fg = "#2d373c"
+file_panel_item_selected_bg = "#ffd5b8"
+
+# ========= Sidebar Special Items =========
+sidebar_title = "#ffd5b8"
+sidebar_item_selected_fg = "#2d373c"
+sidebar_item_selected_bg = "#bfced8"
+sidebar_divider = "#495a66"
+
+# ========= Modal Special Items =========
+modal_cancel_fg = "#2d373c"
+modal_cancel_bg = "#d48678" # Kept from original
+
+modal_confirm_fg = "#2d373c"
+modal_confirm_bg = "#027c9b" # Kept from original
+
+# ========= Help Menu =========
+help_menu_hotkey = "#bfced8"
+help_menu_title = "#ffd5b8"
