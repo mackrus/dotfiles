@@ -1,7 +1,7 @@
 export PATH="/opt/local/bin:$PATH"
 # zsh aliases
 alias cc="nvim ~/.zshrc"
-alias cs='source ~/.zshrc'
+alias cs="source ~/.zshrc"
 
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 export LDFLAGS="-L/usr/local/opt/libpq/lib"
@@ -21,7 +21,7 @@ export PATH="$HOME/miniconda3/bin:$PATH"
 export PATH="$PATH:/usr/local/bin/Cursor"
 
 # >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
+# !! Contents within this block are managed by "conda init" !!
 # __conda_setup="$('$HOME/miniconda3/bin/conda' 'shell.zsh' 'hook' 2>/dev/null)"
 # if [ $? -eq 0 ]; then
 #   eval "$__conda_setup"
@@ -57,7 +57,7 @@ spf() {
   }
 }
 
-# Created by `pipx` on 2024-11-17 17:48:50
+# Created by pipx on 2024-11-17 17:48:50
 export PATH="$PATH:$HOME/.local/bin"
 
 # python uv PATH
@@ -67,7 +67,7 @@ export PATH="$HOME/.local/share/uv/python/cpython-3.14.2-macos-x86_64-none/bin:$
 export PATH=$PATH:~/go/bin
 
 # superfile
-# nvim-cd is for spf to cd to current dir before editing with hotkey 'e'
+# nvim-cd is for spf to cd to current dir before editing with hotkey "e"
 export PATH="$HOME/bin:$PATH"
 
 # nodejs
@@ -92,11 +92,11 @@ source ~/.env
 #######################################################################
 
 ## Gemini
-alias g='gemini'
+alias g="gemini"
 
 # Nvim
 # custom settings
-export EDITOR='nvim'
+export EDITOR="nvim"
 
 # bat text highlighting
 export BAT_THEME=base16
@@ -111,7 +111,7 @@ fi
 
 # aerc email client
 export AERC_CONFIG_DIR="$HOME/.config/aerc"
-alias aerc='aerc -C "$AERC_CONFIG_DIR/aerc.conf" -A "$AERC_CONFIG_DIR/accounts.conf" -B "$AERC_CONFIG_DIR/binds.conf"'
+alias aerc="aerc -C "\$AERC_CONFIG_DIR/aerc.conf" -A "\$AERC_CONFIG_DIR/accounts.conf" -B "\$AERC_CONFIG_DIR/binds.conf""
 
 #gpg kechain
 export GPG_TTY=$(tty)
@@ -133,46 +133,6 @@ export NODE_OPTIONS="--max-old-space-size=4096"
  # nice zsh powerbar oh-my-posh
 eval "$(oh-my-posh init zsh --config $HOME/.config/oh-my-posh/config.json)"
 
-# source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-# source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
- # nice autocomplete and syntax highlighting
- # source /usr/local/opt/zsh-autosuggestions/share/zsh-autosuggestions/zsh-autosuggestions.zsh
- # source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-#######################################################################
-#
-#                        My own projects
-#
-#######################################################################
-
-# face recognition app (usage: just write 'face')
-alias face='cd ~/Documents/Programmering/python/face_recog/face && uv run main.py'
-# job application script
-alias jobsearch='/usr/local/bin/job_search_cli.sh'
-
-# function to run gmail_cleaner from terminal
-alias gmail-clean='$HOME/.gmail-cleaner/.venv/bin/python $HOME/.gmail-cleaner/main.py'
-
-################## PYTHON #######################
-# script to init projects
-alias uvinit="uv run --active $HOME/Documents/Programmering/python/proj_setup_uv_git_init/main.py \$1"
-
-alias uvr='uv pip freeze > requirements.txt'
-
-function myinit() {
-  source ~/Documents/Programmering/python/proj_setup_uv_git_init/.venv/bin/activate
-  uvinit "$1" # Run the init script
-  cd "$1"     # Explicitly change to the project directory
-  uvr         # Generate requirements.txt
-  deactivate
-}
-
-# activate quant venv
-alias aq="source ~/.venvs/bin/activate"
-#################################################
-
-# script to commit git repo
-alias gqc="git-quick-commit.sh"
-
 alias n=nvim
 
 # Show dotfiles in Finder
@@ -182,4 +142,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 export PATH="/usr/local/opt/trash/bin:$PATH"
-alias dot='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias dot="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+
+# Load local/private config
+[ -f ~/.zshrc_local ] && source ~/.zshrc_local

@@ -9,3 +9,4 @@
 *.bak
 *.log
 helper/helper
+.zshrc_local
