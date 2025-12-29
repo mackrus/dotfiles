@@ -1,0 +1,15 @@
+*
+.DS_Store
+*.log
+*.bak
+*.swp
+*.tmp
+*_old
+*_manual
+*.bak
+*.log
+helper/helper
+.zshrc_local
+aerc.log
+history.txt
+*.log
