@@ -30,11 +30,11 @@ $env.config = ($env.config | merge {
 alias g = gemini
 alias cc = nvim ~/.config/nushell/config.nu
 alias jobsearch = /usr/local/bin/job_search_cli.sh
-alias gmail-clean = ($env.HOME)/.gmail-cleaner/.venv/bin/python ($env.HOME)/.gmail-cleaner/main.py
-alias uvinit = uv run --active ($env.HOME)/Documents/Programmering/python/proj_setup_uv_git_init/main.py
+alias gmail-clean = uv run --project ($env.HOME + "/.gmail-cleaner") python ($env.HOME + "/.gmail-cleaner/main.py")
+alias uvinit = uv run --project ($env.HOME + "/Documents/Programmering/python/proj_setup_uv_git_init") python ($env.HOME + "/Documents/Programmering/python/proj_setup_uv_git_init/main.py")
 alias gqc = git-quick-commit.sh
 alias n = nvim
-alias face = do { cd ~/Documents/Programmering/python/face_recog/face; uv run main.py }
+alias face = uv run --project ($env.HOME + "/Documents/Programmering/python/face_recog/face") python ($env.HOME + "/Documents/Programmering/python/face_recog/face/main.py")
 
 # --- Custom Commands ---
 
