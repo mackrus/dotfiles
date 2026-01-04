@@ -50,7 +50,7 @@ def --env myinit [name: string] {
 
 # Smart Open
 def --env o [file: string] {
-    let ext = ($file | path parse | get extension | str lowercase)
+    let ext = ($file | path parse | get extension | str downcase)
     if $ext == "pdf" {
         ^tdf $file
     } else {
