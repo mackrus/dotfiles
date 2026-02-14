@@ -20,20 +20,6 @@ export PATH="$HOME/miniconda3/bin:$PATH"
 # Cursor path
 export PATH="$PATH:/usr/local/bin/Cursor"
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by "conda init" !!
-# __conda_setup="$('$HOME/miniconda3/bin/conda' 'shell.zsh' 'hook' 2>/dev/null)"
-# if [ $? -eq 0 ]; then
-#   eval "$__conda_setup"
-# else
-#   if [ -f "$HOME/miniconda3/etc/profile.d/conda.sh" ]; then
-#     . "$HOME/miniconda3/etc/profile.d/conda.sh"
-#   else
-#     export PATH="$HOME/.local/share/uv/python/cpython-3.13.2-macos-x86_64-none/bin/python3.13:$PATH"
-#   fi
-# fi
-# unset __conda_setup
-# <<< conda initialize <<<
 
 # Superfile cd functionality
 spf() {
@@ -63,6 +49,9 @@ export PATH="$PATH:$HOME/.local/bin"
 # python uv PATH
 export PATH="$HOME/.local/share/uv/python/cpython-3.14.2-macos-x86_64-none/bin:$PATH"
 
+# ruff formatting tool
+export PATH="$HOME/.local/bin:$PATH"
+
 # Golang
 export PATH=$PATH:~/go/bin
 
@@ -83,7 +72,8 @@ export PATH="/usr/local/opt/node@22/bin:$PATH"
 ######################################################################
 
 # source env variables
-source ~/.env
+# SECURITY: Secrets disabled globally. Migrate project-specific vars to .envrc.
+# source ~/.env
 
 #######################################################################
 #
@@ -146,3 +136,4 @@ alias dot="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 
 # Load local/private config
 [ -f ~/.zshrc_local ] && source ~/.zshrc_local
+eval "$(direnv hook zsh)"
